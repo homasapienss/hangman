@@ -9,6 +9,9 @@ public class WordChoice {
         int randNumber = new Random().nextInt(quantityOfTheWords(filePath));
         int count = 0;
         String line;
+
+
+
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             while ((line = reader.readLine()) != null) {
                 count++;
@@ -22,6 +25,7 @@ public class WordChoice {
             throw new RuntimeException(e);
         }
         return "none";
+
     }
 
     public static int quantityOfTheWords(String filePath) {
